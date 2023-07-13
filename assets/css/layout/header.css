@@ -1,0 +1,112 @@
+.header {
+    align-items          : center;
+    grid-template-columns: repeat(12, 1fr);
+    height               : 100vh;
+    transition           : ease-in-out 0.3s;
+    position             : relative;
+    width                : 100%;
+    z-index              : 9999;
+}
+
+.header-container {
+    align-items    : center;
+    grid-column    : 1/-1;
+    flex-direction : column;
+    justify-content: center;
+    overflow       : hidden;
+    padding        : 0 12px;
+    text-align     : center;
+    width          : 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .header-container {
+        align-items: start;
+        grid-column: 2/12;
+        text-align : left;
+    }
+}
+
+.header-title {
+    font-size    : 2.25rem;
+    font-weight  : 700;
+    line-height  : 48px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .header-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-title {
+        text-align: center;
+    }
+}
+
+.header-subtitle {
+    color        : rgba(var(--bs-white-rgb), 0.8);
+    font-family  : var(--bs-secont-font);
+    font-size    : 1.5rem;
+    font-weight  : 500;
+    line-height  : 30px;
+    margin-bottom: 40px;
+}
+
+.header-subtitle span {
+    border-bottom: 2px solid rgb(24, 210, 110);
+    color        : var(--bs-white);
+}
+
+.nav-desktop {
+    display      : none;
+    margin-bottom: 40px;
+    width        : 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-desktop {
+        display: block;
+    }
+}
+
+.nav-desktop ul {
+    align-items    : center;
+    gap            : 30px;
+    justify-content: start;
+}
+
+.social-links {
+    align-items    : center;
+    gap            : 10px;
+    justify-content: center;
+    width          : 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .social-links {
+        justify-content: start;
+    }
+}
+
+.social-links a {
+    align-items    : center;
+    background     : rgba(var(--bs-white-rgb), 0.1);
+    border-radius  : 50%;
+    display        : flex;
+    height         : 40px;
+    justify-content: center;
+    transition     : var(--bs-transition);
+    text-align     : center;
+    width          : 40px;
+}
+
+.social-links a i {
+    color: var(--bs-white);
+}
+
+.social-links a:hover {
+    background: rgb(24, 210, 110);
+}

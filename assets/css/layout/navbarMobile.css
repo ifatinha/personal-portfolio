@@ -1,0 +1,67 @@
+/* navbar mobile */
+.btn-movel {
+    height: 28px;
+    width : 28px;
+}
+
+#menu-mobile {
+    align-self     : start;
+    background     : url("../../images/menu-de-tres-linhas.png") center no-repeat;
+    background-size: cover;
+    grid-column    : 12 / -1;
+    position       : absolute;
+    top            : 20px;
+    right          : 10px;
+}
+
+@media screen and (min-width: 992px) {
+    #menu-mobile {
+        display: none;
+    }
+}
+
+#nav-mobile {
+    background-color: rgba(var(--bs-black-rgb), 0.9);
+    height          : 100%;
+    left            : 0;
+    overflow        : hidden;
+    position        : fixed;
+    transition      : 0.5s;
+    top             : 0;
+    width           : 0;
+    z-index         : 9999;
+}
+
+.container-mobile {
+    bottom  : 0;
+    left    : 0;
+    padding : 40px 10px;
+    position: absolute;
+    top     : 0;
+    width   : 100%;
+}
+
+#btn-close {
+    background     : url("../../images/botao-fechar.png") center no-repeat;
+    background-size: cover;
+    position       : absolute;
+    right          : 10px;
+    top            : 20px;
+}
+
+#nav-mobile ul {
+    border        : 2px solid rgba(var(--bs-white-rgb), 0.2);
+    bottom        : 45px;
+    flex-direction: column;
+    gap           : 10px;
+    left          : 15px;
+    overflow-y    : auto;
+    padding       : 10px 0;
+    position      : absolute;
+    right         : 15px;
+    top           : 60px;
+}
+
+#nav-mobile ul li {
+    padding: 8px 10px;
+}

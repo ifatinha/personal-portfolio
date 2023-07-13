@@ -1,0 +1,42 @@
+html,
+body {
+    height: 100%;
+    width : 100%;
+}
+
+body {
+    background : transparent;
+    color      : var(--bs-white);
+    font-family: var(--bs-primary-font);
+    font-size  : var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    position   : relative;
+}
+
+body::before {
+    background     : linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../images/background1.jpg") center center no-repeat;
+    background-size: cover;
+    content        : "";
+    height         : 100vh;
+    left           : 0;
+    position       : fixed;
+    right          : 0;
+    top            : 0;
+    width          : 100%;
+    z-index        : -9999;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.container {
+    margin   : 0 auto;
+    max-width: 1320px;
+    width    : 100%;
+}

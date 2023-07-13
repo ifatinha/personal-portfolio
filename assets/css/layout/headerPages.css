@@ -1,0 +1,42 @@
+.headerPages {
+    align-items: center;
+    background : var(--bs-black);
+    overflow   : hidden;
+    padding    : 0 2%;
+    position   : fixed;
+    height     : 80px;
+    width      : 100%;
+    z-index    : 9999;
+}
+
+.headerPages-container {
+    align-items     : center;
+    justify-content : space-between;
+}
+
+.headerPages-title h1 {
+    font-size  : 1.625rem;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+@media screen and (min-width: 992px) {
+    .headerPages-title h1 {
+        font-size: 2.25rem;
+    }
+}
+
+
+.nav-desktop_page {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-desktop_page {
+        display: block;
+    }
+}
+
+.nav-desktop_page ul {
+    gap: 30px;
+}

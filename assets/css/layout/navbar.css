@@ -1,0 +1,34 @@
+.navbar a {
+    color      : rgba(var(--bs-white-rgb), 0.7);
+    line-height: 24px;
+    position   : relative;
+    transition : var(--bs-transition);
+    white-space: nowrap;
+}
+
+.navbar a::after {
+    background-color: rgb(24, 210, 110);
+    bottom          : -4px;
+    content         : "";
+    height          : 2px;
+    left            : 0;
+    position        : absolute;
+    transition      : var(--bs-transition);
+    width           : 0;
+}
+
+.navbar a.active {
+    color: var(--bs-white);
+}
+
+.navbar a:not(.active):hover {
+    color: var(--bs-white);
+}
+
+.navbar a.active::after {
+    width: 50%;
+}
+
+.navbar a:hover::after {
+    width: 50%;
+}

@@ -1,2 +1,2 @@
-# Personal Portfolio
-Project developed during the integrated course program Web Design for Everybody: Basics of Web Development &amp; Coding at the University of Michigan
+# portfolio
+Final project of the learning path of the Web Design for Everybody Capstone course at the University of Michigan.
