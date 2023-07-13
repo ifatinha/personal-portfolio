@@ -1,0 +1,183 @@
+.portfolio-container {
+    align-items    : center;
+    flex-direction : column;
+    gap            : 40px;
+    justify-content: center;
+    width          : 100%;
+}
+
+.portfolio-list {
+    align-items    : center;
+    flex-wrap      : wrap;
+    gap            : 20px;
+    justify-content: space-around;
+}
+
+.portfolio-list li {
+    background    : rgba(var(--bs-white-rgb), 0.1);
+    border-radius : 4px;
+    color         : var(--bs-white);
+    cursor        : pointer;
+    font-family   : var(--bs-secont-font);
+    font-size     : 0.875rem;
+    font-weight   : 600;
+    line-height   : 1;
+    padding       : 8px 16px 10px;
+    text-transform: uppercase;
+    text-align    : center;
+    transition    : all 0.3s ease-in-out;
+}
+
+.portfolio-list li:first-of-type {
+    background-color: var(--bs-green);
+}
+
+.portfolio-list li:not(:first-of-type):hover {
+    background-color: var(--bs-green);
+}
+
+.project-container {
+    flex-wrap      : wrap;
+    gap            : 20px;
+    justify-content: space-between;
+    width          : 100%;
+}
+
+.project-item {
+    left    : 0;
+    position: relative;
+    top     : 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    .project-item {
+        flex: 0 0 48%;
+    }
+}
+
+.project-wrap {
+    background: rgba(var(--bs-black-rgb), 0.6);
+    cursor    : pointer;
+    height    : 100%;
+    overflow  : hidden;
+    position  : relative;
+    transition: 0.3s;
+    z-index   : 1;
+    width     : 100%;
+}
+
+.project-wrap::before {
+    background: rgba(var(--bs-black-rgb), 0.6);
+    bottom    : 30px;
+    content   : "";
+    left      : 30px;
+    opacity   : 0;
+    position  : absolute;
+    right     : 30px;
+    top       : 30px;
+    transition: all ease-in-out 0.3s;
+    z-index   : 2;
+}
+
+.project-wrap:hover::before {
+    bottom : 0;
+    left   : 0;
+    right  : 0;
+    top    : 0;
+    opacity: 1;
+}
+
+.project-wrap:hover .project-info {
+    opacity: 1;
+}
+
+.project-wrap:hover .project-info::before {
+    left: 0;
+    top : 0;
+}
+
+.project-wrap:hover .project-info::after {
+    bottom: 0;
+    right : 0;
+}
+
+.project-wrap img {
+    height    : 100%;
+    object-fit: cover;
+    width     : 100%;
+}
+
+.project-info {
+    align-items    : center;
+    bottom         : 0;
+    flex-direction : column;
+    justify-content: center;
+    left           : 0;
+    opacity        : 0;
+    position       : absolute;
+    right          : 0;
+    transition     : all ease-in-out 0.3s;
+    text-align     : center;
+    top            : 0;
+    z-index        : 3;
+}
+
+.project-info::before {
+    border-top : 3px solid #fff;
+    border-left: 3px solid #fff;
+    content    : "";
+    display    : block;
+    height     : 48px;
+    left       : 35px;
+    position   : absolute;
+    top        : 35px;
+    transition : all 0.5s ease 0s;
+    width      : 48px;
+    z-index    : 99994;
+}
+
+.project-info::after {
+    border-bottom: 3px solid #fff;
+    border-right : 3px solid #fff;
+    bottom       : 35px;
+    content      : "";
+    display      : block;
+    height       : 48px;
+    position     : absolute;
+    right        : 35px;
+    transition   : all 0.5s ease 0s;
+    width        : 48px;
+    z-index      : 99994;
+}
+
+.project-info h4 {
+    font-size    : 1.25rem;
+    font-weight  : 600;
+    font-family  : var(--bs-secont-font);
+    line-height  : 24px;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    font-size     : 0.875rem;
+    line-height   : 20px;
+    margin-bottom : 8px;
+    text-transform: uppercase;
+}
+
+.project-links {
+    text-align: center;
+    z-index   : 4;
+}
+
+.project-links a {
+    display   : inline-block;
+    font-size : 1.75rem;
+    margin    : 0 4px;
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    color: var(--bs-green);
+}
