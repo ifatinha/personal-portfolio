@@ -163,7 +163,8 @@
     width      : 100%;
 }
 
-.form-input input:focus {
+.form-input input:focus,
+.form-input textarea:focus {
     background: rgba(var(--bs-white-rgb), 0.1);
 }
 
