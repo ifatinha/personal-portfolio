@@ -1,0 +1,184 @@
+.contact-container {
+    grid-template-columns: 1fr;
+    grid-template-areas  :
+        "address"
+        "email"
+        "socialProfile"
+        "call"
+        "form";
+    gap  : 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas  :
+            "address address socialProfile socialProfile"
+            "email email call call"
+            "form form form form";
+    }
+}
+
+.address {
+    grid-area: address;
+}
+
+.socialProfile {
+    grid-area: socialProfile;
+}
+
+.email {
+    grid-area: email;
+}
+
+.call {
+    grid-area: call;
+}
+
+.form {
+    background : rgba(var(--bs-white-rgb), 0.08);
+    grid-column: form;
+    padding    : 30px;
+}
+
+.contact-item {
+    align-items: center;
+    background : rgba(var(--bs-white-rgb), 0.08);
+    gap        : 20px;
+    padding    : 20px;
+    width      : 100%;
+}
+
+.contact-item .contact-icon {
+    align-items    : center;
+    background     : rgba(var(--bs-white-rgb), 0.1);
+    border-radius  : 50%;
+    display        : flex;
+    height         : 52px;
+    justify-content: center;
+    width          : 52px;
+}
+
+.contact-icon i {
+    color    : var(--bs-green);
+    font-size: 1.5rem;
+}
+
+.contact-info h3 {
+    color      : rgba(var(--bs-white-rgb), 0.5);
+    font-size  : 1.25rem;
+    font-weight: 700;
+}
+
+.contact-info .contact-txt {
+    font-size  : 0.875rem;
+    line-height: 24px;
+}
+
+.contact-info a {
+    font-style: italic;
+}
+
+.contact-social {
+    align-items: center;
+    gap        : 10px;
+    margin-top : 8px;
+}
+
+.contact-social a {
+    display    : inline-block;
+    font-size  : 1.125rem;
+    line-height: 1;
+    transition : .3s ease-in-out;
+}
+
+.contact-social a:hover {
+    color: var(--bs-green);
+}
+
+.form-container {
+    gap                  : 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas  :
+        "name"
+        "email"
+        "subject"
+        "message"
+        "button";
+    justify-items: center;
+    width        : 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .form-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas  :
+            "name name email email"
+            "subject subject subject subject"
+            "message message message message"
+            "button button button button";
+    }
+}
+
+.inputName {
+    grid-area: name;
+}
+
+.inputEmail {
+    grid-area: email;
+}
+
+.inputSubject {
+    grid-area: subject;
+}
+
+.inputMessage {
+    grid-area: message;
+}
+
+.button {
+    grid-area : button;
+    max-width : 200px;
+    margin    : 0 auto;
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-input input,
+.form-input textarea {
+    background : rgba(var(--bs-white-rgb), 0.08);
+    border     : 0;
+    color      : var(--bs-white);
+    font-size  : 0.875rem;
+    font-weight: 600;
+    font-family: var(--bs-secont-font);
+    outline    : none;
+    padding    : 10px 15px;
+    transition : 0.3s;
+    transition : 0.3s ease-in-out;
+    width      : 100%;
+}
+
+.form-input input:focus {
+    background: rgba(var(--bs-white-rgb), 0.1);
+}
+
+.button button {
+    background   : var(--bs-green);
+    border       : none;
+    border-radius: 4px;
+    cursor       : pointer;
+    color        : var(--bs-white);
+    font-size    : 1.1rem;
+    font-family  : var(--bs-secont-font);
+    padding      : 15px 30px;
+    transition   : all 0.4s ease 0s;
+}
+
+.button button:hover {
+    background: rgb(21, 187, 98);
+}
